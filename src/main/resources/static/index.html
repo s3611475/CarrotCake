@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Carrot cake</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <h1 data-bind="text: heading"></h1>
+</body>
+</html>
+<script src="knockout-3.4.2.js" ></script>
+<script>
+    // This is a simple *viewmodel* - JavaScript that defines the data and behavior of your UI
+    function AppViewModel() {
+        this.heading = ko.observable("Carrot Cake");
+    }
+
+    // Activates knockout.js
+    ko.applyBindings(new AppViewModel());
+</script>
