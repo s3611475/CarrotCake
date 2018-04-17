@@ -1,0 +1,112 @@
+#logo{
+	/*Nav Bar logo CSS*/
+	height:37px;
+	width:37px;
+	float:left;
+}
+
+nav{
+    /*Nav bar CSS*/
+    position:sticky;
+    top:0;
+    z-index:1;
+    background-color:white;
+}
+
+nav ul {
+	/*Nav bar CSS*/
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3),
+    inset 0 0 3px rgba(255, 255, 255, 0.1);
+    text-align: right;
+}
+nav ul li {
+	/*Nav bar CSS*/
+    display: inline-block;
+}
+nav ul li a {
+	/*Nav bar CSS*/
+    padding: 10px; 
+    color: black;
+    font-size: 18px;
+    font-family: Arial;
+    text-decoration: none;
+    display: block;
+ }
+
+nav li:hover{
+	/* Nav bar color change on hover*/
+	background-color:#eaeae1;
+}
+ 
+#Main{
+	/*Main Div for important things*/
+    min-width: 100px;
+	max-width: 100%;
+	height:600px;
+	background-color:white;
+	box-shadow:0 0 15px rgba(0,0,0,0.3);
+	/*background-image:url("design/hotel1.jpg")*/
+} 
+
+#Second{
+	/*Secondary div for stuff and things*/
+	text-align:center;
+	vertical-align:middle;
+    min-width: 100px;
+	max-width: 100%;
+	height:600px;
+	background-color:white;
+	box-shadow:0 0 15px rgba(0,0,0,0.3);
+	/*background-image:url("design/hotel2.jpg")*/
+} 
+
+.buttonContainer{
+	/*As per name, container for buttons*/
+	position:relative;
+	text-align:centre;
+	top:500px;
+}
+
+.button {
+	/*button design and style*/
+	width: 215px; 
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.3),
+    inset 0 0 3px rgba(255, 255, 255, 0.1);
+    background-color: transparent;
+    color: black;
+    padding: 15px 25px;
+	position:absolute;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button:hover {
+	/*Button colour when hovered over*/
+    background-color: #eaeae1;
+}
+
+#availableRooms{
+	/*Available Rooms Button*/
+
+	left:30%;
+}
+#booking{
+	/*Make a booking Button*/
+	top:50%;
+	left:57%;
+}
+#roomService{
+	/*Order Room Service Button*/
+	top:50%;
+	left:30%;
+}
+#feedback{
+	/*Leave Feedback Button*/
+	top:50%;
+	left:57%;
+}
+
+.divHeading{
+	text-align:center;
+	padding:250px;
+}

@@ -1,11 +1,14 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Carrot cake</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Derp</title>
 </head>
 <body>
-    <h1 data-bind="text: heading"></h1>
+<div class="container">
+    <div th:replace="fragments/header :: header"></div>
+    <div layout:fragment="content"></div>
+</div>
 </body>
 </html>
 <script src="knockout-3.4.2.js" ></script>
