@@ -3,9 +3,28 @@
       xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorator="layouts/default">
+
+<head>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+
 <body>
+
+    <nav>
+        <a href="index.html"><img id="logo" src="../static/images/gb.png"></a>
+        <ul>
+            <!-- Nav bar and list options / links -->
+            <li><a href="#">SEARCH AVAILABLE ROOMS</a></li>
+            <li><a href="#">MAKE A BOOKING</a></li>
+            <li><a href="#">LEAVE A REVIEW</a></li>
+            <li><a href="#">ABOUT</a></li>
+        </ul>
+    </nav>
+
     <div id="page" layout:fragment="content">
         <div>This is view rooms page</div>
     </div>
+
 </body>
+
 </html>
