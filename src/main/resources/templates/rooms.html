@@ -22,7 +22,45 @@
     </nav>
 
     <div id="page" layout:fragment="content">
-        <div>This is view rooms page</div>
+        <div>
+            <form>
+                Room Details<br>
+                <div>
+                    <div class="divInline">
+                        Please enter requested start date:<br>
+                        <input type="date" name="viewStart">
+                    </div>
+                    <div class="divInline">
+                        Please enter requested end date:<br>
+                        <input type="date" name="viewEnd"><br>
+                    </div>
+                </div>
+                <div>
+                    Adults:<br>
+                    <input type="number" name="viewAdults" min="0">
+                </div>
+                <div>
+                    Children:<br>
+                    <input type="number" name="viewChildren" min="0">
+                </div>
+                <div>
+                    Beds:<br>
+                    <input type="number" name="viewBeds" min="0">
+                </div>
+                <div>
+                    Room Type:<br>
+                    <select name="viewType">
+                        <option value="gold">Gold</option>
+                        <option value="platinum">Platinum</option>
+                        <option value="diamond">Diamond</option>
+                        <option value="californium">Californium</option>
+                    </select>
+                </div>
+                <div>
+                    <input type="submit" name="viewSubmit" value="Find Rooms">
+                </div>
+            </form>
+        </div>
     </div>
 
 </body>

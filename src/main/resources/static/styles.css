@@ -12,7 +12,6 @@ nav{
     z-index:1;
     background-color:white;
 }
-
 nav ul {
 	/*Nav bar CSS*/
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3),
@@ -32,7 +31,6 @@ nav ul li a {
     text-decoration: none;
     display: block;
  }
-
 nav li:hover{
 	/* Nav bar color change on hover*/
 	background-color:#eaeae1;
@@ -79,15 +77,14 @@ nav li:hover{
     font-size: 16px;
     cursor: pointer;
 }
-
 .button:hover {
 	/*Button colour when hovered over*/
     background-color: #eaeae1;
 }
 
+/* HOME button alignment */
 #availableRooms{
 	/*Available Rooms Button*/
-
 	left:30%;
 }
 #booking{
@@ -109,4 +106,8 @@ nav li:hover{
 .divHeading{
 	text-align:center;
 	padding:250px;
+}
+/* For aligning div blocks horizontally */
+.divInline{
+    display: inline-block;
 }
