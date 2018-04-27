@@ -20,8 +20,40 @@
             <li><a href="#">ABOUT</a></li>
         </ul>
     </nav>
-
+    <!-- Main page content container -->
     <div id="page" layout:fragment="content">
+        <!-- Slideshow code from https://www.w3schools.com/howto/howto_js_slideshow.asp -->
+        <div class="slideshowBox">
+            <!-- Slideshow images entered within -->
+            <div class="slideshowSlide">
+                <img src="../static/images/roomType1.jpg" style="width:100%">"
+                <div class="slideshowCaption">Gold Room</div>
+            </div>
+            <div class="slideshowSlide">
+                <img src="../static/images/roomType2.jpg" style="width:100%">"
+                <div class="slideshowCaption">Platinum Room</div>
+            </div>
+            <div class="slideshowSlide">
+                <img src="../static/images/roomType3.jpg" style="width:100%">"
+                <div class="slideshowCaption">Diamond Room</div>
+            </div>
+            <div class="slideshowSlide">
+                <img src="../static/images/roomType4.jpg" style="width:100%">"
+                <div class="slideshowCaption">Californium Room</div>
+            </div>
+        </div>
+        <!-- Next and previous slide arrows -->
+        <a class="slideshowPrev">&#10094;</a>
+        <a class="slideshowNext">&#10095;</a>
+        <br>
+        <!-- Slideshow tracking using dots -->
+        <div class="slideshowTracker">
+            <span class="slideshowDot"></span>
+            <span class="slideshowDot"></span>
+            <span class="slideshowDot"></span>
+        </div>
+
+        <!-- "Find a room" form container -->
         <div>
             <form>
                 Room Details<br>
@@ -61,6 +93,7 @@
                 </div>
             </form>
         </div>
+
     </div>
 
 </body>
