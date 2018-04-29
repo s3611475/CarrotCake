@@ -1,4 +1,4 @@
-DROP TABLE ROOM;
+DROP TABLE ROOM if exists;
 
 CREATE TABLE room (
    id INT NOT NULL,
