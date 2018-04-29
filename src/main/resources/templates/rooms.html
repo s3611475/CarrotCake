@@ -3,95 +3,103 @@
       xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorator="layouts/default">
-
-<head>
-    <link rel="stylesheet" href="../static/styles.css">
-</head>
-
 <body>
-
-    <nav>
-        <a href="index.html"><img id="logo" src="../static/images/gb.png"></a>
-        <ul>
-            <!-- Nav bar and list options / links -->
-            <li><a href="#">SEARCH AVAILABLE ROOMS</a></li>
-            <li><a href="#">MAKE A BOOKING</a></li>
-            <li><a href="#">LEAVE A REVIEW</a></li>
-            <li><a href="#">ABOUT</a></li>
-        </ul>
-    </nav>
     <!-- Main page content container -->
     <div id="page" layout:fragment="content">
         <!-- Slideshow code from https://www.w3schools.com/howto/howto_js_slideshow.asp -->
         <div class="slideshowBox">
             <!-- Slideshow images entered within -->
             <div class="slideshowSlide">
-                <img src="../static/images/roomType1.jpg" style="width:100%">"
+                <img src="/images/roomType1.jpg" style="width:100%">"
                 <div class="slideshowCaption">Gold Room</div>
             </div>
             <div class="slideshowSlide">
-                <img src="../static/images/roomType2.jpg" style="width:100%">"
+                <img src="/images/roomType2.jpg" style="width:100%">"
                 <div class="slideshowCaption">Platinum Room</div>
             </div>
             <div class="slideshowSlide">
-                <img src="../static/images/roomType3.jpg" style="width:100%">"
+                <img src="/images/roomType3.jpg" style="width:100%">"
                 <div class="slideshowCaption">Diamond Room</div>
             </div>
             <div class="slideshowSlide">
-                <img src="../static/images/roomType4.jpg" style="width:100%">"
+                <img src="/images/roomType4.jpg" style="width:100%">
                 <div class="slideshowCaption">Californium Room</div>
             </div>
-        </div>
-        <!-- Next and previous slide arrows -->
-        <a class="slideshowPrev">&#10094;</a>
-        <a class="slideshowNext">&#10095;</a>
-        <br>
-        <!-- Slideshow tracking using dots -->
-        <div class="slideshowTracker">
-            <span class="slideshowDot"></span>
-            <span class="slideshowDot"></span>
-            <span class="slideshowDot"></span>
+            <!-- Next and previous slide arrows -->
+            <a class="slideshowPrev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="slideshowNext" onclick="plusSlides(1)">&#10095;</a>
+            <div class="slideshowTracker" style="text-align:center">
+                <span class="slideshowDot"></span>
+                <span class="slideshowDot"></span>
+                <span class="slideshowDot"></span>
+            </div>
         </div>
 
+
         <!-- "Find a room" form container -->
-        <div>
-            <form>
-                Room Details<br>
-                <div>
-                    <div class="divInline">
-                        Please enter requested start date:<br>
-                        <input type="date" name="viewStart">
-                    </div>
-                    <div class="divInline">
-                        Please enter requested end date:<br>
-                        <input type="date" name="viewEnd"><br>
-                    </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 offset-md-4">
+                    <form>
+                        Room Details<br>
+                        <div>
+                            <div class="divInline">
+                                Please enter requested start date:<br>
+                                <input type="date" name="viewStart">
+                            </div>
+                            <div class="divInline">
+                                Please enter requested end date:<br>
+                                <input type="date" name="viewEnd"><br>
+                            </div>
+                        </div>
+                        <div>
+                            Adults:<br>
+                            <input type="number" name="viewAdults" min="0">
+                        </div>
+                        <div>
+                            Children:<br>
+                            <input type="number" name="viewChildren" min="0">
+                        </div>
+                        <div>
+                            Beds:<br>
+                            <input type="number" name="viewBeds" min="0">
+                        </div>
+                        <div>
+                            Room Type:<br>
+                            <select name="viewType">
+                                <option value="gold">Gold</option>
+                                <option value="platinum">Platinum</option>
+                                <option value="diamond">Diamond</option>
+                                <option value="californium">Californium</option>
+                            </select>
+                        </div>
+                        <div>
+                            <input type="submit" name="viewSubmit" value="Find Rooms">
+                        </div>
+                    </form>
                 </div>
-                <div>
-                    Adults:<br>
-                    <input type="number" name="viewAdults" min="0">
+            </div>
+            <h2 style="text-align:center; margin-top: 20px; margin-bottom:20px">Rooms Available:</h2>
+            <div class="row">
+                <div class="col-md-2 offset-md-2">
+                    Room number
                 </div>
-                <div>
-                    Children:<br>
-                    <input type="number" name="viewChildren" min="0">
+                <div class="col-md-2">
+                    Number of beds
                 </div>
-                <div>
-                    Beds:<br>
-                    <input type="number" name="viewBeds" min="0">
+                <div class="col-md-2">
+                    Room Type
                 </div>
-                <div>
-                    Room Type:<br>
-                    <select name="viewType">
-                        <option value="gold">Gold</option>
-                        <option value="platinum">Platinum</option>
-                        <option value="diamond">Diamond</option>
-                        <option value="californium">Californium</option>
-                    </select>
+                <div class="col-md-2">
+                    Book
                 </div>
-                <div>
-                    <input type="submit" name="viewSubmit" value="Find Rooms">
-                </div>
-            </form>
+            </div>
+            <div class="row" th:each="room : ${rooms}">
+                <div class="col-md-2 offset-md-2" th:text="${room.id}"></div>
+                <div class="col-md-2" th:text="${room.numRooms}"></div>
+                <div class="col-md-2" th:text="${room.roomType}"></div>
+                <div class="col-md-2"><button type="button" class="btn btn-primary">Book</button></div>
+            </div>
         </div>
 
     </div>
@@ -99,3 +107,34 @@
 </body>
 
 </html>
+
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("slideshowSlide");
+        var dots = document.getElementsByClassName("slideshowDot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+    }
+</script>

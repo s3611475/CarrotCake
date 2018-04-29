@@ -10,6 +10,8 @@ public class Room {
     @GeneratedValue
     private Long id;
     private String roomNumber;
+    private String roomType;
+    private Integer numRooms;
 
     public Long getId() {
         return id;
@@ -25,5 +27,21 @@ public class Room {
 
     public void setRoomNumber(String roomNumber) {
         this.roomNumber = roomNumber;
+    }
+
+    public String getRoomType() {
+        return roomType;
+    }
+
+    public void setRoomType(String roomType) {
+        this.roomType = roomType;
+    }
+
+    public Integer getNumRooms() {
+        return numRooms;
+    }
+
+    public void setNumRooms(Integer numRooms) {
+        this.numRooms = numRooms;
     }
 }
