@@ -6,79 +6,87 @@
 <body>
     <!-- Main page content container -->
     <div id="page" layout:fragment="content">
-        <!-- Slideshow code from https://www.w3schools.com/howto/howto_js_slideshow.asp -->
-        <div class="slideshowBox">
-            <!-- Slideshow images entered within -->
-            <div class="slideshowSlide">
-                <img src="/images/roomType1.jpg" style="width:100%">"
-                <div class="slideshowCaption">Gold Room</div>
+        <div>
+            <div class="divInline" float="left">
+                <!-- Slideshow code from https://www.w3schools.com/howto/howto_js_slideshow.asp -->
+                <div class="slideshowBox">
+                    <!-- Slideshow images entered within -->
+                    <div class="slideshowSlide">
+                        <img src="/images/roomType1.jpg" style="width:100%">
+                        <div class="slideshowCaption">Gold Room</div>
+                    </div>
+                    <div class="slideshowSlide">
+                        <img src="/images/roomType2.jpg" style="width:100%">
+                        <div class="slideshowCaption">Platinum Room</div>
+                    </div>
+                    <div class="slideshowSlide">
+                        <img src="/images/roomType3.jpg" style="width:100%">
+                        <div class="slideshowCaption">Diamond Room</div>
+                    </div>
+                    <div class="slideshowSlide">
+                        <img src="/images/roomType4.jpg" style="width:100%">
+                        <div class="slideshowCaption">Californium Room</div>
+                    </div>
+                    <!-- Next and previous slide arrows -->
+                    <a class="slideshowPrev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="slideshowNext" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+
+                <div class="slideshowTracker" style="text-align:center">
+                    <span class="slideshowDot"></span>
+                    <span class="slideshowDot"></span>
+                    <span class="slideshowDot"></span>
+                    <span class="slideshowDot"></span>
+                </div>
             </div>
-            <div class="slideshowSlide">
-                <img src="/images/roomType2.jpg" style="width:100%">"
-                <div class="slideshowCaption">Platinum Room</div>
-            </div>
-            <div class="slideshowSlide">
-                <img src="/images/roomType3.jpg" style="width:100%">"
-                <div class="slideshowCaption">Diamond Room</div>
-            </div>
-            <div class="slideshowSlide">
-                <img src="/images/roomType4.jpg" style="width:100%">
-                <div class="slideshowCaption">Californium Room</div>
-            </div>
-            <!-- Next and previous slide arrows -->
-            <a class="slideshowPrev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="slideshowNext" onclick="plusSlides(1)">&#10095;</a>
-            <div class="slideshowTracker" style="text-align:center">
-                <span class="slideshowDot"></span>
-                <span class="slideshowDot"></span>
-                <span class="slideshowDot"></span>
+                <!-- "Find a room" form container -->
+            <div class="divInline">
+                <div class="row">
+                    <div class="col-md-4 offset-md-4">
+                        <form>
+                            <h2>Room Details</h2><br>
+                            <div>
+                                <div class="divInline">
+                                    Please enter requested start date:<br>
+                                    <input type="date" name="viewStart">
+                                </div>
+                                <div class="divInline">
+                                    Please enter requested end date:<br>
+                                    <input type="date" name="viewEnd"><br>
+                                </div>
+                            </div>
+                            <div>
+                                Adults:<br>
+                                <input type="number" name="viewAdults" min="0">
+                            </div>
+                            <div>
+                                Children:<br>
+                                <input type="number" name="viewChildren" min="0">
+                            </div>
+                            <div>
+                                Beds:<br>
+                                <input type="number" name="viewBeds" min="0">
+                            </div>
+                            <div>
+                                Room Type:<br>
+                                <select name="viewType">
+                                    <option value="gold">Gold</option>
+                                    <option value="platinum">Platinum</option>
+                                    <option value="diamond">Diamond</option>
+                                    <option value="californium">Californium</option>
+                                </select>
+                            </div>
+                            <br>
+                            <div>
+                                <input type="submit" name="viewSubmit" value="Find Rooms">
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
 
-
-        <!-- "Find a room" form container -->
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 offset-md-4">
-                    <form>
-                        Room Details<br>
-                        <div>
-                            <div class="divInline">
-                                Please enter requested start date:<br>
-                                <input type="date" name="viewStart">
-                            </div>
-                            <div class="divInline">
-                                Please enter requested end date:<br>
-                                <input type="date" name="viewEnd"><br>
-                            </div>
-                        </div>
-                        <div>
-                            Adults:<br>
-                            <input type="number" name="viewAdults" min="0">
-                        </div>
-                        <div>
-                            Children:<br>
-                            <input type="number" name="viewChildren" min="0">
-                        </div>
-                        <div>
-                            Beds:<br>
-                            <input type="number" name="viewBeds" min="0">
-                        </div>
-                        <div>
-                            Room Type:<br>
-                            <select name="viewType">
-                                <option value="gold">Gold</option>
-                                <option value="platinum">Platinum</option>
-                                <option value="diamond">Diamond</option>
-                                <option value="californium">Californium</option>
-                            </select>
-                        </div>
-                        <div>
-                            <input type="submit" name="viewSubmit" value="Find Rooms">
-                        </div>
-                    </form>
-                </div>
-            </div>
+        <div>
             <h2 style="text-align:center; margin-top: 20px; margin-bottom:20px">Rooms Available:</h2>
             <div class="row">
                 <div class="col-md-2 offset-md-2">
@@ -101,7 +109,6 @@
                 <div class="col-md-2"><button type="button" class="btn btn-primary">Book</button></div>
             </div>
         </div>
-
     </div>
 
 </body>

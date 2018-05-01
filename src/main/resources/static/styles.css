@@ -61,7 +61,7 @@ nav li:hover{
 .buttonContainer{
 	/*As per name, container for buttons*/
 	position:relative;
-	text-align:centre;
+	text-align:center;
 	top:500px;
 }
 
@@ -110,6 +110,8 @@ nav li:hover{
 /* For aligning div blocks horizontally */
 .divInline{
     display: inline-block;
+    border: 1px solid black;
+
 }
 
 
@@ -117,9 +119,8 @@ nav li:hover{
 * {box-sizing:border-box}
 /* Slideshow container */
 .slideshowBox {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
+    position: relative;
+    margin: auto;
 }
 /* Hide the images by default */
 .slideshowSlide {
